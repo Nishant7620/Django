@@ -12,7 +12,22 @@
     {% for i in numbers %} 
     <li>{{i}}</li   >
     {% endfor %}
-    <h1>Batman</h1>
+    <h1>Batman  </h1>
+    <h2> Dc heros {{hero}} </h2>
+    <table border=2px>
+        <tr>
+            <th>Name</th>
+            <th>Heroic_name</th>
+            <th>city</th>
+        </tr>
+        {% for h in hero  %}
+        <tr>
+            <td>{{h.name}}</td>
+            <td>{{h.heroic_name}}</td>
+            <td>{{h.city}}</td>
+        </tr>
+        {% endfor %}
+    </table>
     {% comment %} {%  include "Marvel/spiderman.html" %} {% endcomment %}
     
     <script src="{% static 'Dc/js/bootstrap.min.js' %}"></script> 
