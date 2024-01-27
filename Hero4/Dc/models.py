@@ -8,5 +8,5 @@ class Dc(models.Model):
     city = models.CharField(max_length=50,default="NA")
 
     def __str__(self):
-        return self.name
+         return self.name
     
