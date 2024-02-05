@@ -7,6 +7,10 @@
 </head>
 <body>
     <h1>Flash</h1>
-    <h3>{{dc}}</h3>
+    <form mehtod="POST" novalidate>
+    {% csrf_token %} 
+    {{dc}}
+    <input type ="submit">
+</form>
 </body>
 </html>
