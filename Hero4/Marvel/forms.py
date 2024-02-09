@@ -6,5 +6,4 @@ class MarvelForm(forms.ModelForm):
     # heroic_name =forms.CharField()
     class Meta:
         model = Marvel
-
         fields = ['name','heroic_name']

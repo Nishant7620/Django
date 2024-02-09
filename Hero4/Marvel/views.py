@@ -15,9 +15,11 @@ def spiderman(request):
             print('Heroic_name',h)
             m = Marvel(name = n,heroic_name = h)
             m.save()
+           
             form = MarvelForm() 
     else:
-        form = MarvelForm()        
+        form = MarvelForm()
+        mm = Marvel.objects.all()        
     return render(request,'Marvel/spiderman.html',{'form':form})
 
     
