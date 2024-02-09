@@ -9,14 +9,14 @@ def spiderman(request):
     if request.method =="POST":
         form = MarvelForm(request.POST)
         if form.is_valid():
-            n = form.cleaned_data['name']
-            h = form.cleaned_data['heroic_name']
-            print('Name',n)
-            print('Heroic_name',h)
-            m = Marvel(name = n,heroic_name = h)
-            m.save()
-           
-            form = MarvelForm() 
+            # n = form.cleaned_data['name']
+            # h = form.cleaned_data['heroic_name']
+            # print('Name',n)
+            # print('Heroic_name',h)
+            # m = Marvel(name = n,heroic_name = h)
+            form.save()
+        mm = Marvel.objects.all()
+        form = MarvelForm() 
     else:
         form = MarvelForm()
         mm = Marvel.objects.all()        
