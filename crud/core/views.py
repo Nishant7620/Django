@@ -16,4 +16,4 @@ def crud (request):
     else:
         form = MarvelForm()
         mm = MarvelModel.objects.all()  
-    return render(request,'crud/crud.html',{'form':form} ,{'mm':mm})
+    return render(request,'crud/crud.html',{'form':form,'mm':mm})
