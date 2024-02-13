@@ -34,7 +34,7 @@
                 <th scope="row">{{m.id}}</th>
                 <td>{{m.name}}</td>
                 <td>{{m.heroic_name}}</td>
-                <td><form action="" method="POST">
+                <td><form action="{% url "delete" m.id %}" method="POST">
                   {% csrf_token %}
                   <input type="submit" value="delete">
                 </form></td>
