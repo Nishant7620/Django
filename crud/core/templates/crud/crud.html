@@ -34,7 +34,10 @@
                 <th scope="row">{{m.id}}</th>
                 <td>{{m.name}}</td>
                 <td>{{m.heroic_name}}</td>
-                <td>@mdo</td>
+                <td><form action="" method="POST">
+                  {% csrf_token %}
+                  <input type="submit" value="delete">
+                </form></td>
               </tr>
               {% endfor%}
             </tbody>
